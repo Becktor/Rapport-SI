@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace} % This package is used to control linespacing; With \onehalfspacing for instance
+\usepackage[danish]{babel}
+\renewcommand{\danishhyphenmins}{22} % bedre orddeling
+\usepackage{bm}
+\usepackage{fnbreak}
+\usepackage{sectsty}
+\usepackage{wrapfig}
+\usepackage[scriptsize]{caption}
+\usepackage[danish,textsize=tiny,backgroundcolor=red,bordercolor=blue]{todonotes}
+\interfootnotelinepenalty=10000
+\usepackage{graphicx}
+\usepackage{qtree}
+\usepackage{latexsym, qtree}
+\newcommand{\F}{\mathtt{F}}
+\newcommand{\T}{\mathtt{T}}
+\addto\captionsdanish{
+\renewcommand\abstractname{Abstract}
+}
+%-----------------------------------------------------
+\newcommand{\doctitle}{Projektopgave}
+\newcommand{\docsubject}{Introduktion til Softwareteknologi(02121)}
+\newcommand{\docauthor}{Christian Kiær s123812 og Jonathan Becktor s123094}
+\newcommand{\docdate}{Januar 2013}
+\newcommand{\docplace}{Danmarks Tekniske Universitet}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\docsubtitle}{Introduktion til Softwareteknologi (02121)}
+%-----------------------------------------------------
+
+%-----------Scientific and mathematical packages begin-----------
+% Math package
+	\usepackage{amsmath}
+
+
+% Mathematical symbols
+	\usepackage{amssymb}
+\DeclareMathOperator{\p}{\cdot}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\newcommand{\nn}{\nonumber}
+%-----------Scientific and mathematical packages end--------------
+
+% Non-default fonts - has to come _after_ some of the mathematical packages
+\usepackage{pxfonts}
+
+% Page margins
+\usepackage[left=2.0cm, right=1.5cm]{geometry}
+
+% Hyperref
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+%\usepackage[hidelinks]{hyperref}  
+\hypersetup{pdftitle={\doctitle}} 
+\hypersetup{pdfsubject={\docsubject}}
+\hypersetup{pdfauthor={\docauthor}}
+
+% Setspace
+\usepackage{setspace}
+\onehalfspacing
+%\numberwithin{equation}{section}
+
+% Title
+\title{
+\HRule \\
+\textsc{\doctitle} \\
+	 \small{\textsl{\docsubtitle}}
+\HRule
+}
+\author{\docauthor\\\small{\docplace}}
+\date{\docdate}
+
+% Fancyheader : http://mirrors.dotsrc.org/ctan/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[RO]{\docauthor \hfill \doctitle \hfill\thepage}
+\fancyhead[RO]{\docauthor \hfill \doctitle \hfill \docsubject \hfill \thepage /\ref{TotPages}}
+% Get rid of annoying error messages
+\setlength{\headheight}{14.5pt}
+\usepackage{totpages}
+\usepackage{sectsty}
+\allsectionsfont{\scshape}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Resume}
+Vi fik stillet til opgave at udvikle en ny udgave, af det klassiske spil Space Invaders. Spillet går i alt sin enkelthed, ud på at spilleren skal holde et givet antal invaders væk fra at invadere jorden. Spillet forgår på et n x m gitter, hvor antallet af invaders bestemmes ud fra disse parametre. Den første del af vores projektet, var at udvikle en simpel version af spillet i Java. I den simple del, skal der kun implementeres bevægelse af spilleren, og turbaseret bevægelse af invaders når disse skydes af spilleren og dermed fjernes fra spillet. Hvis invaders når spilleren er spillet tabt. Gitteret skal være af variabel størrelse, som spilleren skal kunne bestemme før spillet begynder. Antallet af invaders skal afhænge af dette gitter.\\
+Når denne del er lavet, skal der tilføjes avancerede funktioner. Avancerede funktioner indebærer invader bevægelse, tidspres, bunkers, anden grafik eller lignende. Alle disse funktioner skal også udvikles i Java og implementeres i den simple del af spillet. Disse funktioner skaber alle problemer, som vi skal løse for at implementere dem i spillet.\\
+\newpage
+\tableofcontents
+\newpage
+\section{Indledning}
+\subsection{Formål}
+Space invaders er et klassisk spil, udgivet i 1978 designet af Tomohiro Nishikado. Spillet er en af de første skydespil, hvor spilleren får til opgave at stoppe Space Invaders for at overtage jorden.
+Vi skal designe og udvikle vores egen fortolkning af spillet, og genskabe vores syn på Space Invaders.
+\subsection{Space Invaders}
+Spillet er originalt et to-dimensionalt skydespil, hvor spilleren kontroller en kanon som kan skyde de angribene invaders. Spilleren kan styrer kanonen horisontalt hen over bunden af banen. Spilleren skall derefter skyde et vilkårligt antal rækker og kolonner af invaders, som bevæger sig horisontalt frem og tilbage mens de bevæger sig mod bunden. Ved at ramme en invader får spilleren point, og kommer tættere på sejren over invaders. 
+\subsection{Arbejdet}
+Vi har sammen udarbejdet spillet, 
+\subsection{Indledende problemer}
+Af indledende problemer kan nævnes følgende:\\
+
+ \quad \textbullet \quad Opsætningen af gitteret. Hvordan skal det gøres? Hvilken funktion skal bruges? Her tænkes om gitteret skal opsættes som 2D Array, pixels eller andet.\\
+ 
+ 
+ \quad \textbullet \quad Hvordan skal spiller/invaders tegnes i gitteret? Hvilke metoder skal bruges for at tegne?\\
+ 
+ 
+ \quad \textbullet \quad Bevægelse af spilleren. Hvordan skal det implementeres at spilleren skal kunne bevæge sig? Forskellen på bevægelse i Array, pixel grid og andet.\\
+ 
+ \quad \textbullet \quad Bevægelse og fjernelse af invaders. I første den simple del af spillet, skal invaders bevæge sig turbaseret. Hvordan får vi fjernet invaders? Når de så er fjernet, hvordan vil invaders bevæge sig i gitteret?\\
+ 
+  \quad \textbullet \quad Indlæsning af sprites til spiller og invaders. Hvordan skal de indlæses og tegnes på gitteret? Hvordan skal de hænge sammen med bevægelsen?\\
+ 
+Disse problemer kan stort set beskrives, som problemerne for den indledende del af Space Invaders. Når disse er løst, vil vi have et, omend meget simpelt, Space Invaders der kan spilles.
+\newpage
+ 
+\section{Metoder}
+\subsection{Ved udvikling af simple del}
+\subsubsection{Grid}
+Ved udvikling af griddet, brugte vi først Java Swing til at lave en JFrame. Vi påførte her et JPanel.\\
+Her følte vi, at vi i hvert fald havde to muligheder. Brug af et canvas ud fra et 2D array eller et canvas ud fra pixels. Vi besluttede os for at bruge at designe det ud  fra pixels, da bevægelse af spiller og videreudvikling af spillet ville forgå lettere ved dette valg. I den anden metode, ville al bevægelse ske i "ryk" og spillet ville derfor opfattes "hakkende" med dårlig framerate. Ved brug af pixels, kan vores bevægelse ske ved meget små størrelse og spillet vil opfattes flydende. Al videreudvikling vil også være nemmere, da tilføjelse af skud, invader bevægelse og lignende vil fungere meget bedre i et miljø baseret på pixels.
+\subsubsection{Indsættelse af invader/player}
+Ved indsættelse af spiller og invaders, har vi valgt os at benytte 
+\subsubsection{Playermovement}
+Bevægelse af selve spilleren skulle vi have implementeret. Dette skulle vi løse ved først at tilføje en KeyListener, som ved 
+\subsubsection{Invadermovement og invaderremovement}
+\subsubsection{Indlæsning af sprites}
+\subsection{Ved udvikling af avanceret del}
+\subsubsection{Invader bevægelse}
+\subsubsection{Bunkers}
+\subsubsection{Invader skud}
+\subsubsection{Highscore}
+\subsubsection{Grafik}
+\subsubsection{Pause}
+\subsubsection{Levels}
+\newpage
+\section{Resultater}
+\newpage
+\section{Diskussion}
+\newpage
+\end{document}

@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Resume}{}
+\BOOKMARK [1][-]{section.2}{Indledning}{}
+\BOOKMARK [2][-]{subsection.2.1}{Form\345l}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Space Invaders}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{Arbejdet}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Indledende problemer}{section.2}
+\BOOKMARK [1][-]{section.3}{Metoder}{}
+\BOOKMARK [2][-]{subsection.3.1}{Ved udvikling af simple del}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Grid}{subsection.3.1}
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Inds\346ttelse af invader/player}{subsection.3.1}
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Playermovement}{subsection.3.1}
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Invadermovement og invaderremovement}{subsection.3.1}
+\BOOKMARK [3][-]{subsubsection.3.1.5}{Indl\346sning af sprites}{subsection.3.1}
+\BOOKMARK [2][-]{subsection.3.2}{Ved udvikling af avanceret del}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Invader bev\346gelse}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Bunkers}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Invader skud}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Highscore}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Grafik}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Pause}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Levels}{subsection.3.2}
+\BOOKMARK [1][-]{section.4}{Resultater}{}
+\BOOKMARK [1][-]{section.5}{Diskussion}{}
